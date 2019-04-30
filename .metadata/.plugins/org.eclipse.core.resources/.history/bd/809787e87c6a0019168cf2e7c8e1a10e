@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置Mabatis映射文件 -->
+<mapper namespace="com.dao.ElectronicmdDAO">
+	<resultMap type="electronicmd" id="electronicmdMap">
+		<id property="electronicmdid" column="electronicmdid" />
+		<result property="hospitalname" column="hospitalname" />
+		<result property="address" column="address" />
+		<result property="contact" column="contact" />
+		<result property="memo" column="memo" />
+	</resultMap>
+	<!-- 插入语句 DAO通过id调用此配置 -->
+	<insert id="insertHospital" parameterType="hospital">
+		insert into hospital(hospitalid , hospitalname , address , contact , memo )
+		values(#{hospitalid} , #{hospitalname} , #{address} , #{contact} ,
+		#{memo} )
+	</insert>
+	<!-- 更新语句 DAO通过id调用此配置 -->
+	<update id="updateHospital" parameterType="hospital">
+		update hospital set hospitalname=#{hospitalname} , address=#{address} ,
+		contact=#{contact} , memo=#{memo} where hospitalid=#{hospitalid}
+	</update>
+	<!-- 按主键删除 DAO通过id调用此配置 -->
+	<delete id="deleteHospital" parameterType="String">
+		delete from hospital where hospitalid = #{hospitalid}
+	</delete>
+	<!-- 查询全部信息 DAO通过id调用此配置 -->
+	<select id="getAllElectronicMD" resultMap="hospitalMap">
+		select a.* from dzbl a where 1=1 order by hospitalization_date desc
+	</select>
+	<!-- 按主键查询 DAO通过id调用此配置 -->
+	<select id="getHospitalById" parameterType="String" resultMap="hospitalMap">
+		select a.* from hospital a where 1=1 and hospitalid=#{hospitalid}
+		order by hospitalid desc
+	</select>
+	<!-- 按条件精确查询 DAO通过id调用此配置 -->
+	<select id="getElectronicMDByCond" parameterType="hospital"
+		resultMap="hospitalMap">
+		select a.* from dzbl a where 1=1
+		<if test="usersid != null and '' != usersid">
+			and a.usersid = #{usersid}
+		</if>
+		<if test="address != null and '' != address">
+			and a.address = #{address}
+		</if>
+		<if test="contact != null and '' != contact">
+			and a.contact = #{contact}
+		</if>
+		<if test="memo != null and '' != memo">
+			and a.memo = #{memo}
+		</if>
+	</select>
+	<!-- 按条件模糊查询 DAO通过id调用此配置 -->
+	<select id="getHospitalByLike" parameterType="hospital"
+		resultMap="hospitalMap">
+		select a.* from hospital a where 1=1
+		<if test="hospitalname != null and '' != hospitalname">
+			and a.hospitalname like CONCAT('%', CONCAT(#{hospitalname}, '%'))
+		</if>
+		<if test="address != null and '' != address">
+			and a.address like CONCAT('%', CONCAT(#{address}, '%'))
+		</if>
+		<if test="contact != null and '' != contact">
+			and a.contact like CONCAT('%', CONCAT(#{contact}, '%'))
+		</if>
+		<if test="memo != null and '' != memo">
+			and a.memo like CONCAT('%', CONCAT(#{memo}, '%'))
+		</if>
+	</select>
+</mapper>
+
+

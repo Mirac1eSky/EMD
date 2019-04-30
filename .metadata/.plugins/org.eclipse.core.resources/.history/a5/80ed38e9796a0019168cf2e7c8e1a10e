@@ -1,0 +1,30 @@
+package com.action;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.entity.ElectronicMD;
+import com.entity.Hospital;
+import com.service.ElectronicMDService;
+
+import com.entity.Banner;
+import com.service.BannerService;
+import com.util.PageHelper;
+import com.util.VeDate;
+//定义为控制器
+@Controller
+//设置路径
+@RequestMapping(value = "/electronicmd", produces = "text/plain;charset=utf-8")
+public class ElectroniceMDAction extends BaseAction{
+	private ElectronicMDService electronicmdService;
+	// 显示全部数据
+	@RequestMapping("getAllHospital.action")
+	public String getAllHospital(String number) {
+		List<Hospital> hospitalList = this.hospitalService.getAllHospital();
+		PageHelper.getPage(hospitalList, "hospital", null, null, 10, number, this.getRequest(), null);
+		return "admin/listhospital";
+	}
+}

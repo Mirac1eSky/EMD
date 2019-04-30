@@ -1,0 +1,21 @@
+package com.entity;
+import com.util.VeDate;
+public class ElectronicMD {
+	private String dzblid = "D" + VeDate.getStringId();
+	private String ano;
+	private String drugsname;
+	private String usersid;
+	private String doctorsid;
+	private String operationrecords;
+	private String nursingrecords;
+	private String bloodtest;
+	private String ct;
+	private String allergydrgus;
+	private String addtime;
+	private String hospitalization_date;
+	private String discharge date;
+	private String discharge ward;
+	
+
+	
+}

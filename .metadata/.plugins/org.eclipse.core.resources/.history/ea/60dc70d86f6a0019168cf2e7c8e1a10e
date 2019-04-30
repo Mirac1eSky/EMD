@@ -1,0 +1,7 @@
+package com.service.impl;
+
+
+@Service("electronicMDService")
+public class ElectronicMDServiceImpl implements ElectronicMDService{
+
+}

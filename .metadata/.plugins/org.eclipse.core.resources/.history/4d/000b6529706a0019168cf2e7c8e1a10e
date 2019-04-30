@@ -1,0 +1,57 @@
+package com.service.impl;
+
+import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.dao.ElectronicmdDAO;
+import com.entity.ElectronicDAO;
+import com.entity.ElectronicMD;
+import com.service.ElectronicMDService;
+
+@Service("electronicMDService")
+public class ElectronicMDServiceImpl implements ElectronicMDService{
+
+	@Override
+	public int insertElectronicMD(Advice advice) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateElectronicMD(Advice advice) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteElectronicMD(String adviceid) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Advice> getAllElectronicMD() {
+		// TODO Auto-generated method stub
+		return this.ElectronicmdDAO.getAllArticle();
+	}
+
+	@Override
+	public List<Advice> getElectronicMDByCond(Advice advice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Advice> getAdviceByLike(Advice advice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Advice getAdviceById(String adviceid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

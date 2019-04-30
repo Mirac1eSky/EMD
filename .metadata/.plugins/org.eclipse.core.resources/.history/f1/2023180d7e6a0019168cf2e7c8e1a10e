@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置Mabatis映射文件 -->
+<mapper namespace="com.dao.ElectronicmdDAO">
+	<resultMap type="electronicmd" id="electronicmdMap">
+		<id property="electronicmdid" column="electronicmdid" />
+		<result property="usersid" column="usersid" />
+
+	</resultMap>
+	<!-- 按条件精确查询 DAO通过id调用此配置 -->
+	<select id="getElectronicMDByCond" parameterType="hospital"
+		resultMap="hospitalMap">
+		select a.* from dzbl a where 1=1
+		<if test="usersid != null and '' != usersid">
+			and a.usersid = #{usersid}
+		</if>
+	</select>
+
+</mapper>
+
+
