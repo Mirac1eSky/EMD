@@ -39,18 +39,18 @@
 						<th class="text-center">病房</th>
 					</tr>
 				</thead>
-				<c:forEach items="${dzblList}" var="dzbl">
+				<c:forEach items="${emdList}" var="dzbl">
 					<tr align="center">
 						<td class="center">${dzbl.dzblid}</td>
 						<td class="center">${dzbl.usersid}</td>
-						<td class="center">${dzbl.hospitalization date}</td>
-						<td class="center">${dzbl.discharge date}</td>
+						<td class="center">${dzbl.hospitalization_date}</td>
+						<td class="center">${dzbl.discharge_date}</td>
 						<td class="center">${dzbl.doctersid}</td>
-						<td class="center">${dzbl.CT}</td>
-						<td class="center">${dzbl.operation records}</td>
-						<td class="center">${dzbl.nursing records}</td>
-						<td class="center">${dzbl.blood test}</td>
-						<td class="center">${dzbl.allergy drugs}</td>
+						<td class="center">${dzbl.ct}</td>
+						<td class="center">${dzbl.operationrecords}</td>
+						<td class="center">${dzbl.nursingrecords}</td>
+						<td class="center">${dzbl.bloodtest}</td>
+						<td class="center">${dzbl.allergydrugs}</td>
 						<td class="center">${dzbl.advice}</td>
 						<td class="center">${dzbl.ward}</td>
 					</tr>
@@ -62,8 +62,8 @@
 						<label>查询条件: <select name="cond" style="width: 100px">
 								<option value="dzblid">按病历号查询</option>
 								<option value="usersid">按患者姓名查询</option>
-								<option value="hospitalization date">按住院日期查询</option>
-								<option value="discharge date">按出院日期查询</option>
+								<option value="hospitalization_date">按住院日期查询</option>
+								<option value="discharge_date">按出院日期查询</option>
 								<option value="doctersid">按主治医生查询</option>
 								<option value="ward">按病房查询</option>
 						</select>

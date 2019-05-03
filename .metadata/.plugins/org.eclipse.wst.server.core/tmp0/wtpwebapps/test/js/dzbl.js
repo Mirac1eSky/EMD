@@ -137,7 +137,7 @@ $("#allergydrugs_msg").empty();
 $("#advice_msg").empty();
 $("#ward_msg").empty();
 if (dzblid == "" || dzblid == null) {
-	$("#dzblid").after("<span id='dzblid_msg' style='color: red'>用户名不能为空</span>");
+	$("#dzblid").after("<span id='dzblid_msg' style='color: red'>患者姓名名不能为空</span>");
 	return false;
 }
 if (usersid == "" || usersid == null) {
@@ -145,35 +145,35 @@ if (usersid == "" || usersid == null) {
 	return false;
 }
 if (hospitalization_date == "" || hospitalization_date == null) {
-	$("#hospitalization_date").after("<span id='hospitalization_date_msg' style='color: red'>姓名不能为空</span>");
+	$("#hospitalization_date").after("<span id='hospitalization_date_msg' style='color: red'>住院日期不能为空</span>");
 	return false;
 }
 if (discharge_date == "" || discharge_date == null) {
-	$("#discharge_date").after("<span id='discharge_date_msg' style='color: red'>出生日期不能为空</span>");
+	$("#discharge_date").after("<span id='discharge_date_msg' style='color: red'>出院日期日期不能为空</span>");
 	return false;
 }
 if (doctersid == "" || doctersid == null) {
-	$("#doctersid").after("<span id='doctersid_msg' style='color: red'>所在医院不能为空</span>");
+	$("#doctersid").after("<span id='doctersid_msg' style='color: red'>医生名不能为空</span>");
 	return false;
 }
 if (operationrecords == "" || operationrecords == null) {
-	$("#operationrecords").after("<span id='operationrecords_msg' style='color: red'>科室不能为空</span>");
+	$("#operationrecords").after("<span id='operationrecords_msg' style='color: red'>手术记录不能为空</span>");
 	return false;
 }
 if (nursingrecords == "" || nursingrecords == null) {
-	$("#nursingrecords").after("<span id='nursingrecords_msg' style='color: red'>学历不能为空</span>");
+	$("#nursingrecords").after("<span id='nursingrecords_msg' style='color: red'>护理记录不能为空</span>");
 	return false;
 }
 if (bloodtest == "" || bloodtest == null) {
-	$("#bloodtest").after("<span id='bloodtest_msg' style='color: red'>毕业院校不能为空</span>");
+	$("#bloodtest").after("<span id='bloodtest_msg' style='color: red'>血液测试不能为空</span>");
 	return false;
 }
 if (image == "" || image == null) {
-	$("#image").after("<span id='image_msg' style='color: red'>照片不能为空</span>");
+	$("#image").after("<span id='image_msg' style='color: red'>CT照片不能为空</span>");
 	return false;
 }
 if (allergydrugs == "" || allergydrugs == null) {
-	$("#allergydrugs").after("<span id='allergydrugs_msg' style='color: red'>医生介绍不能为空</span>");
+	$("#allergydrugs").after("<span id='allergydrugs_msg' style='color: red'>过敏药物不能为空</span>");
 	return false;
 }
 if (advice == "" || advice == null) {

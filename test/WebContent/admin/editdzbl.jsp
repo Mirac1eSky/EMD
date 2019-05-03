@@ -48,14 +48,14 @@
 							    </div>
 							<div class="tab-pane active in" id="home">
 								<div class="form-group">
-									<label>住院日期</label> <input type="text" name=" hospitalization date" class="form-control" id=" hospitalization date"
-										value="${dzbl. hospitalization date}" />
+									<label>住院日期</label> <input type="text" name=" hospitalization_date" class="form-control" id=" hospitalization_date"
+										value="${dzbl.hospitalization_date}" />
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">
 								<div class="form-group">
-									<label>出院日期</label> <input type="text" name=" discharge date" class="from-control" id=" discharge date"
-									   value="${dzbl.discharge date }" />
+									<label>出院日期</label> <input type="text" name="discharge_date" class="from-control" id=" discharge_date"
+									   value="${dzbl.discharge_date }" />
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">
@@ -68,30 +68,30 @@
 								<div class="form-group">
 									 <label>CT</label>
 									<script type="text/javascript" src="js/selimage.js"></script>
-									<input class="form-control" type="text" name="CT" value="${dzbl.CT}" id="CT" onclick="selimage();"
+									<input class="form-control" type="text" name="image" value="${dzbl.ct}" id="image" onclick="selimage();"
 										readonly="readonly" />
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">
 								<div class="form-group">
-									<label>手术记录</label> <input type="text" name="operation records" class="form-control" id="operation records"
-									    value="${dzbl.operation records }"/>
+									<label>手术记录</label> <input type="text" name="operationrecords" class="form-control" id="operationrecords"
+									    value="${dzbl.operationrecords }"/>
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">
 							    <div class="form-group">
-							       <label>护理记录</label> <input type="text" name="nursing records" class="form-control" id="nursing records"
-							            value="${dzbl.nursing records }"/>
+							       <label>护理记录</label> <input type="text" name="nursingrecords" class="form-control" id="nursing records"
+							            value="${dzbl.nursingrecords }"/>
 							    </div>
 							</div>
 							<div class="tab-pane active in" id="home">
 								<div class="form-group">
-									<label>血液检查</label> <input type="text" name="blood test" class="form-control" id="blood test" value="${dzbl.blood test}" />
+									<label>血液检查</label> <input type="text" name="bloodtest" class="form-control" id="bloodtest" value="${dzbl.bloodtest}" />
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">
 								<div class="form-group">
-									<label>过敏药物</label> <input type="text" name="allergy drugs" class="form-control" id="allergy drugs" value="${dzbl.allergy drugs}" />
+									<label>过敏药物</label> <input type="text" name="allergydrugs" class="form-control" id="allergydrugs" value="${dzbl.allergydrugs}" />
 								</div>
 							</div>
 							<div class="tab-pane active in" id="home">

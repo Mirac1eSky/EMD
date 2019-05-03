@@ -96,13 +96,8 @@
 									<label>病房</label> <input type="text" name="ward" class="form-control" id="ward" placeholder="请输入病房" />
 								</div>
 							</div>
-								 <script type="text/javascript">
-										CKEDITOR.replace('contents', {
-											language : 'zh-cn'
-										});
-									</script>
- 								
 
+ 							
 							<div>
 								<button type="submit" id="sub" class="btn btn-primary">提交保存</button>
 								&nbsp;&nbsp;&nbsp;

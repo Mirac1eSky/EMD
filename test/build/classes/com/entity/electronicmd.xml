@@ -26,17 +26,20 @@
 		#{hospitalization_date} , #{discharge_date} )
 	</insert>
 	<!-- 按条件精确查询 DAO通过id调用此配置 -->
-	<select id="getElectronicMDByCond" parameterType="electronicmd"
-		resultMap="electronicmdMap">
-		select * from dzbl a where 1=1
-		<if test="usersid != null and '' != usersid">
-			and a.usersid = #{usersid}
-		</if>
+	<select id="getElectronicMDByCond" parameterType="electronicmd" resultMap="electronicmdMap">
+		 select * from dzbl where usersid=(select realname from users where usersid=#{usersid});
+
+
 	</select>
+
+
+
 	<select id="getAllElectronicMD" parameterType="electronicmd"
 		resultMap="electronicmdMap">
 		select a.* from dzbl a  where 1=1
 	</select>
+
+
 </mapper>
 
 

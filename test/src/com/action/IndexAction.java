@@ -434,8 +434,13 @@ public class IndexAction extends BaseAction {
 		System.out.println("");
 		System.out.println(userid);
 		emd.setUsersid(userid);
-		System.out.println("789456123123132132132");
-		List<ElectronicMD> emdList = this.electronicMDService.getAllElectronicMD();
+		//System.out.println("789456123123132132132");
+		System.out.println("");
+		System.out.println(this.getSession().getAttribute("userid"));
+		//查询 所有
+		//List<ElectronicMD> emdList = this.electronicMDService.getAllElectronicMD();
+		//查询自己的病历
+		List<ElectronicMD> emdList = this.electronicMDService.getElectronicMDByCond(emd);
 		System.out.println("----------------------");
 		this.getRequest().setAttribute("emdList", emdList);
 		return "users/electronicMD";

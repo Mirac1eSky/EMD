@@ -40,21 +40,23 @@ public class ElectronicMDServiceImpl implements ElectronicMDService{
 	}
 
 	@Override
+	// public List<ElectronicMD> getElectronicMDByCond(ElectronicMD electronicmd) {
+	// 	// TODO Auto-generated method stub
+	// 	return null;
+	// }
 	public List<ElectronicMD> getElectronicMDByCond(ElectronicMD electronicmd) {
+		return this.electronicmdDAO.getElectronicMDByCond(electronicmd);
+	}
+	@Override
+	public List<ElectronicMD> getElectronicMDByLike(ElectronicMD electronicmd) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.electronicmdDAO.getElectronicMDByLike(electronicmd);
 	}
 
 	@Override
-	public List<ElectronicMD> getAdviceByLike(ElectronicMD electronicmd) {
+	public ElectronicMD getElectronicMDById(String electronicmdid) {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ElectronicMD getAdviceById(String electronicmdid) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.electronicmdDAO.getElectronicMDById(electronicmdid);
 	}
 
 

@@ -22,7 +22,7 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="content">
 		<div class="header">
-			<h1 class="page-title">电子病历信息列表</h1>
+			<h1 class="page-title">病例信息列表</h1>
 		</div>
 		<div class="main-content">
 			<table class="table">
@@ -41,24 +41,25 @@
 						<th class="text-center">过敏药物</th>
 						<th class="text-center">医嘱</th>
 						<th class="text-center">病房</th>
+						<th class="text-center">操作</th>
 					</tr>
 				</thead>
-				<c:forEach items="${dzblList}" var="dzbl">
+				<c:forEach items="${emdList}" var="emd">
 					<tr align="center">
-						<td>${dzbl.dzblid}</td>
-						<td>${dzbl.usersid}</td>
-						<td>${dzbl.hospitalization date}</td>
-						<td>${dzbl.discharge date}</td>
-						<td>${dzbl.doctersid}</td>
-						<td>${dzbl.CT}</td>
-						<td>${dzbl.operation records}</td>
-						<td>${dzbl.nursing records}</td>
-						<td>${dzbl.blood test}</td>
-						<td>${dzbl.allergy drugs}</td>
-						<td>${dzbl.advice}</td>
-						<td>${dzbl.ward}</td>
-						<td><a href="dzbl/getDzblById.action?id=${dzbl.dzblid}"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;<a
-							href="dzbl/deleteDzbl.action?id=${dzbl.dzblid}"
+						<td>${emd.dzblid}</td>
+						<td>${emd.usersid}</td>
+						<td>${emd.hospitalization_date}</td>
+						<td>${emd.discharge_date}</td>
+						<td>${emd.doctersid}</td>
+						<td>${emd.ct}</td>
+						<td>${emd.operationrecords}</td>
+						<td>${emd.nursingrecords}</td>
+						<td>${emd.bloodtest}</td>
+						<td>${emd.allergydrugs}</td>
+						<td>${emd.advice}</td>
+						<td>${emd.ward}</td>
+						<td><a href="dzbl/getDzblById.action?id=${emd.dzblid}"><i class="fa fa-pencil"></i></a>&nbsp;&nbsp;<a
+							href="dzbl/deleteDzbl.action?id=${emd.dzblid}"
 							onclick="{if(confirm('确定要删除吗?')){return true;}return false;}"><i class="fa fa-trash-o"></i></a></td>
 					</tr>
 				</c:forEach>
@@ -68,3 +69,4 @@
 	</div>
 </body>
 </html>
+

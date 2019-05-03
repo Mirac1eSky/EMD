@@ -157,6 +157,9 @@
 			<li><ul class="legal-menu9 nav nav-list collapse">
 					<li><a href="electronicmd/createElectronicMD.action"> <span class="title">添加电子病历</span></a></li>
 				</ul></li>
+			<li><ul class="legal-menu9 nav nav-list collapse">
+					<li><a href="electronicmd/getElectronicMD.action"> <span class="title">电子病历信息列表</span></a></li>
+				</ul></li>
 		</ul>
 	</div>
 </c:if>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置Mabatis映射文件 -->
+<mapper namespace="com.dao.ElectronicmdDAO">
+	<resultMap type="electronicmd" id="electronicmdMap">
+		<id property="electronicmdid" column="electronicmdid" />
+		<result property="dzblid" column="dzblid" />
+		<result property="usersid" column="usersid" />
+		<result property="doctersid" column="doctersid" />
+		<result property="operationrecords" column="operationrecords" />
+		<result property="nursingrecords" column="nursingrecords" />
+		<result property="bloodtest" column="bloodtest" />
+		<result property="image" column="image" />
+		<result property="allergydrugs" column="allergydrugs" />
+		<result property="advice" column="advice" />
+		<result property="hospitalization_date" column="hospitalization_date" />
+		<result property="discharge_date" column="discharge_date" />
+
+	</resultMap>
+	<insert id="insertElectronicMD" parameterType="electronicmd">
+		insert into dzbl(dzblid , usersid , doctersid , operationrecords , nursingrecords ,
+		bloodtest , image , allergydrugs , advice , ward , hospitalization_date , discharge_date)
+		values(#{dzblid} , #{usersid} , #{doctersid} , #{operationrecords} , #{nursingrecords}
+		, #{bloodtest} , #{image} , #{allergydrugs} , #{advice} , #{ward} ,
+		#{hospitalization_date} , #{discharge_date} )
+	</insert>
+	<!-- 按条件精确查询 DAO通过id调用此配置 -->
+	<select id="getElectronicMDByCond" parameterType="getAllElectronicMD" resultMap="electronicmdMap">
+		select a.* from dzbl a , doctor b where 1=1 and a.doctorsid = b.realname
+		<if test="ano != null and '' != ano">
+			and a.ano = #{ano}
+		</if>
+		<if test="doctorsid != null and '' != doctorsid">
+			and a.doctorsid = #{doctorsid}
+		</if>
+		<if test="usersid != null and '' != usersid">
+			and a.usersid = #{usersid}
+		</if>
+
+	</select>
+
+
+
+
+
+	<select id="getAllElectronicMD" parameterType="electronicmd"
+		resultMap="electronicmdMap">
+		select a.* from dzbl a  where 1=1
+	</select>
+
+
+</mapper>
+
+

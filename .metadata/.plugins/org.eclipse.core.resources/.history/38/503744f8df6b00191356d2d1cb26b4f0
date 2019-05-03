@@ -1,0 +1,31 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.entity.ElectronicMD;
+@Service("electronicmdService")
+public interface ElectronicMDService {
+	// 插入数据 调用adviceDAO里的insertAdvice配置
+	public int insertElectronicMD(ElectronicMD electronicmd);
+
+	// 更新数据 调用adviceDAO里的updateAdvice配置
+	public int updateElectronicMD(ElectronicMD electronicmd);
+
+	// 删除数据 调用adviceDAO里的deleteAdvice配置
+	public int deleteElectronicMD(String electronicmd);
+
+	// 查询全部数据 调用adviceDAO里的getAllAdvice配置
+	public List<ElectronicMD> getAllElectronicMD();
+
+	// 按照Advice类里面的字段名称精确查询 调用adviceDAO里的getAdviceByCond配置
+	//public List<ElectronicMD> getElectronicMDByCond(ElectronicMD electronicmd);
+	public List<ElectronicMD> getElectronicMDByCond(String doctersid);
+
+	// 按照Advice类里面的字段名称模糊查询 调用adviceDAO里的getAdviceByLike配置
+	public List<ElectronicMD> getElectronicMDByLike(ElectronicMD electronicmd);
+
+	// 按主键查询表返回单一的ElectronicMDe实例 调用ElectronicMDeDAO里的getElectronicMDeById配置
+	public ElectronicMD getElectronicMDById(ElectronicMD electronicmd);
+}
